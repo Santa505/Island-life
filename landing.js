@@ -29,12 +29,12 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 10 * 1,
+    var fiveMinutes = 5 * 1,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
     setTimeout(function() {
         window.location.href = "island.html";
-
-      }, 10000);
+        
+      }, 5000);
 
 };
