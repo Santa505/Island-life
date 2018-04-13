@@ -19,7 +19,7 @@ function cheeseburger(){
     addSongToDom(song);
     var gifImgTag = document.querySelector("#hula");
     gifImgTag.src = "img/patrick.gif";
-    hula.classList.add("bounceInLeft", "patrickAnimated", "bounce", "gif-size", "gif-postion")
+    hula.classList.add("slideInUp", "patrickAnimated", "bounce", "gif-size", "gif-postion")
     let cheeseburger = ".cheeseburger";
     playSound(cheeseburger);
   }
@@ -29,7 +29,7 @@ function cheeseburger(){
     addSongToDom(song);
     var gifImgTag = document.querySelector("#hula");
     gifImgTag.src = "img/fathippo.gif";
-    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
+    hula.classList.add("fadeInDownBig", "animated", "rubberBand", "gif-size", "gif-postion")
     playSound();
   }
   
