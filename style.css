@@ -6,7 +6,9 @@ body {
     background-size: cover;
     background-position: center
 }
-h1{
+img{
+  height: 350px;
+  width: auto;
   grid-row-start: 3;
   grid-row-end: 4;
 }
