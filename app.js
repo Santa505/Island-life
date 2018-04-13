@@ -34,17 +34,31 @@ window.onload = function () {
     startTimer(fiveMinutes, display);
     setTimeout(function() {
         window.location.href = "island.html";
+        
       }, 10000);
+      
 };
 
-var hula = document.querySelector("#hula")
+var patrick = document.querySelector("#patrick")
 
 hula.classList.add("bounceInLeft")
 console.log(hula.style)
 
+playSound()
+function playSound() {
+    const audio = document.querySelector(".cheeseburger");
+    // const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    const img = document.querySelector("img")
+    if (!audio) return;
+
+    img.classList.add('sound');
+    audio.currentTime = 0;
+    audio.play();
+}
+
 
 // // play sound template function
-// function playSound(e) {
+// function playSound(display) {
 //     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 //     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 //     if (!audio) return;
