@@ -1,17 +1,18 @@
 body {
-    display: grid;
-    grid-template-rows: 5vh 45vh 45vh 5vh;
-    background-image: url("/img/background-img.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center
+  display: grid;
+  grid-template-rows: 5vh 45vh 45vh 5vh;
+  background-image: url("/img/background-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
 }
-img{
+img {
   height: 350px;
   width: auto;
   grid-row-start: 3;
   grid-row-end: 4;
 }
-.start-postion{
+.start-postion {
   justify-self: center;
+  margin-left: 230px;
 }
