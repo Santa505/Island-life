@@ -1,49 +1,60 @@
-function myPage () {
+function myPage (randomPage) {    
     var myScenes = [
-        cheeseburger(),
-        pina(),
-        margaritaville()
+        cheeseburger,
+        pina,
+        margaritaville
       ];
-     var randomPage = myScenes[(Math.random(3))];
-    return randomPage
+    var randomPage = myScenes[getRandomInt(myScenes.length)]();
+    return randomPage;
 }
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
 myPage ()
 
-  function cheeseburger(){
+function cheeseburger(){
+    var song = "audio/cheeseburger.m4a";
+    addSongToDom(song);
     var gifImgTag = document.querySelector("#hula");
     gifImgTag.src = "img/patrick.gif";
-    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
+    hula.classList.add("bounceInLeft", "patrickAnimated", "bounce", "gif-size", "gif-postion")
     let cheeseburger = ".cheeseburger";
     playSound(cheeseburger);
   }
   
   function margaritaville(){
-  
+    var song = "audio/margaritaville.m4a";
+    addSongToDom(song);
     var gifImgTag = document.querySelector("#hula");
-    gifImgTag.src = "img/plainHulaGirl.gif";
-  
+    gifImgTag.src = "img/fathippo.gif";
     hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
-  
-    let margaritaville = ".margaritaville";
-    playSound(margaritaville);
+    playSound();
   }
   
   function pina(){
+    var song = "audio/pina.m4a"
+    addSongToDom(song);
     var gifImgTag = document.querySelector("#hula");
-    gifImgTag.src = "img/fathippo.gif";
+    gifImgTag.src = "img/dancingcarlton.gif";
     hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion");
-    let pina = ".pina";
-    playSound(pina);
+    playSound();
   }
-
-  function playSound(song) {
-    const audio = document.querySelector(song);
+  
+  function playSound() {
+    var audio = document.querySelector('audio');
     if (!audio) return;
-    // img.classList.add('sound');
     audio.currentTime = 0;
     audio.play();
-}
+  }
+
+  function addSongToDom(song){
+    var audioTag = document.createElement("audio");
+    audioTag.src = song;
+    let bodyTag = document.querySelector('body');
+    bodyTag.append(audioTag);
+  }  
   
 //   function playSound() {
 //     return randomPage

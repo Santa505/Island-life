@@ -9,38 +9,38 @@ function myPage () {
 
 myPage ()
 
-  function cheeseburger(){
-    var song = "audio/cheeseburger.m4a";
-    addSongToDom(song);
-    var gifImgTag = document.querySelector("#hula");
-    gifImgTag.src = "img/patrick.gif";
-    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
-    let cheeseburger = ".cheeseburger";
-    playSound(cheeseburger);
-  }
+function cheeseburger(){
+  var song = "audio/cheeseburger.m4a";
+  addSongToDom(song);
+  var gifImgTag = document.querySelector("#hula");
+  gifImgTag.src = "img/patrick.gif";
+  hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
+  let cheeseburger = ".cheeseburger";
+  playSound(cheeseburger);
+}
 
-  function margaritaville(){
-    var song = "audio/margaritaville.m4a";
-    addSongToDom(song);
-    var gifImgTag = document.querySelector("#hula");
-    gifImgTag.src = "img/plainHulaGirl.gif";
-    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
-    playSound();
-  }
+function margaritaville(){
+  var song = "audio/margaritaville.m4a";
+  addSongToDom(song);
+  var gifImgTag = document.querySelector("#hula");
+  gifImgTag.src = "img/plainHulaGirl.gif";
+  hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
+  playSound();
+}
 
 function pina(){
-    var song = "audio/pina.m4a"
-    addSongToDom(song);
-    var gifImgTag = document.querySelector("#hula");
-    gifImgTag.src = "img/fathippo.gif";
-    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion");
-    playSound();
-  }
+  var song = "audio/pina.m4a"
+  addSongToDom(song);
+  var gifImgTag = document.querySelector("#hula");
+  gifImgTag.src = "img/fathippo.gif";
+  hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion");
+  playSound();
+}
 
 function playSound() {
-    if (!audio) return;
-    audio.currentTime = 0;
-    audio.play();
+  if (!audio) return;
+  audio.currentTime = 0;
+  audio.play();
 }
 
 

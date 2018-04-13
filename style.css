@@ -35,3 +35,7 @@
 .animated{
   animation-duration: 5s;
 }
+
+.patrickAnimated{
+    animation-duration: 3s;
+}
