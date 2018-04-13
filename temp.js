@@ -1,45 +1,72 @@
-function cheeseburger(){
-  var gifImgTag = document.querySelector("#hula");
-  gifImgTag.src = "img/patrick.gif";
-  hula.classList.add("bounceInLeft animated bounce gif-size gif-postion")
-  let cheeseburger = ".cheeseburger";
-  playSound(cheeseburger);
+function myPage () {
+    var myScenes = [
+        margaritaville
+      ];
+     var randomPage = myScenes;
+     console.log(randomPage);
+    return randomPage
 }
 
-function margaritaville(){
+myPage ()
 
-  var gifImgTag = document.querySelector("#hula");
-  gifImgTag.src = "img/plainHulaGirl.gif";
+  function cheeseburger(){
+    var song = "audio/cheeseburger.m4a";
+    addSongToDom(song);
+    var gifImgTag = document.querySelector("#hula");
+    gifImgTag.src = "img/patrick.gif";
+    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
+    let cheeseburger = ".cheeseburger";
+    playSound(cheeseburger);
+  }
 
-  hula.classList.add("bounceInLeft animated bounce gif-size gif-postion")
-
-  let margaritaville = ".margaritaville";
-  playSound(margaritaville);
-}
+  function margaritaville(){
+    var song = "audio/margaritaville.m4a";
+    addSongToDom(song);
+    var gifImgTag = document.querySelector("#hula");
+    gifImgTag.src = "img/plainHulaGirl.gif";
+    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion")
+    playSound();
+  }
 
 function pina(){
-  var gifImgTag = document.querySelector("#hula");
-  gifImgTag.src = "img/fathippo.gif";
-  hula.classList.add("bounceInLeft animated bounce gif-size gif-postion");
-  let pina = ".pina";
-  playSound(pina);
-}
+    var song = "audio/pina.m4a"
+    addSongToDom(song);
+    var gifImgTag = document.querySelector("#hula");
+    gifImgTag.src = "img/fathippo.gif";
+    hula.classList.add("bounceInLeft", "animated", "bounce", "gif-size", "gif-postion");
+    playSound();
+  }
 
-function playSound(song) {
-    const audio = document.querySelector(song);
+function playSound() {
     if (!audio) return;
-    img.classList.add('sound');
     audio.currentTime = 0;
     audio.play();
 }
 
-// // play sound template function
-// function playSound(display) {
-//     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-//     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+
+function addSongToDom(song){
+  var audioTag = document.createElement("audio");
+  audioTag.src = song;
+  let bodyTag = document.querySelector('body');
+  bodyTag.append(audioTag);
+}
+
+//   function playSound() {
+//     return randomPage
+//   }
+
+//   playsound ();
+
+
+
+// playSound()
+// function playSound() {
+//     const audio = document.querySelector(".cheeseburger");
+//     // const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+//     const img = document.querySelector("img")
 //     if (!audio) return;
 
-//     key.classList.add('playing');
+//     img.classList.add('sound');
 //     audio.currentTime = 0;
 //     audio.play();
 // }
