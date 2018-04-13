@@ -4,7 +4,7 @@ function startTimer(duration, display) {
         minutes,
         seconds;
     function timer() {
-        // get the number of seconds that have elapsed since 
+        // get the number of seconds that have elapsed since
         // startTimer() was called
         diff = duration - (((Date.now() - start) / 1000) | 0);
 
@@ -15,7 +15,7 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds; 
+        display.textContent = minutes + ":" + seconds;
 
         if (diff <= 0) {
             // add one second so that the count down starts at the full duration
@@ -34,9 +34,9 @@ window.onload = function () {
     startTimer(fiveMinutes, display);
     setTimeout(function() {
         window.location.href = "island.html";
-        
+
       }, 10000);
-      
+
 };
 
 var patrick = document.querySelector("#patrick")
@@ -55,6 +55,8 @@ function playSound() {
     audio.currentTime = 0;
     audio.play();
 }
+//need to add .cheeseburger-gif-postion to cheeseburger gif
+
 
 
 // // play sound template function
