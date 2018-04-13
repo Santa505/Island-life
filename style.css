@@ -28,3 +28,6 @@
   font-size: 5em;
   text-align: center;
 }
+.animated{
+  animation-duration: 5s;
+}
