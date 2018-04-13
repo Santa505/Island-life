@@ -1,8 +1,15 @@
 body {
     display: grid;
-    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-rows: 5vh 45vh 45vh 5vh;
     background-image: url("/img/background-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center
+}
+h1{
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.start-postion{
+  justify-self: center;
 }
